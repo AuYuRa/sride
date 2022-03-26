@@ -1,0 +1,6 @@
+framework module Pods_Sride_SrideUITests {
+  umbrella header "Pods-Sride-SrideUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

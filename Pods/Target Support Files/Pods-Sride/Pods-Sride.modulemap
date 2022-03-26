@@ -1,0 +1,6 @@
+framework module Pods_Sride {
+  umbrella header "Pods-Sride-umbrella.h"
+
+  export *
+  module * { export * }
+}
