@@ -418,7 +418,7 @@
                             <color key="tintColor" name="AccentColor"/>
                             <connections>
                                 <action selector="createRide:" destination="yuT-9P-NyO" id="MQZ-LV-L6Q"/>
-                                <segue destination="6y7-kF-cHd" kind="presentation" id="sCo-Xe-5US"/>
+                                <segue destination="gJD-IZ-I4S" kind="presentation" id="sCo-Xe-5US"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -538,13 +538,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="car.2.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="20N-UX-Hcz">
-                                <rect key="frame" x="165" y="47" width="84" height="92.5"/>
+                                <rect key="frame" x="165" y="103" width="84" height="92.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="RRg-9U-fsI"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sF2-AK-TuY">
-                                <rect key="frame" x="107" y="149" width="192" height="48"/>
+                                <rect key="frame" x="107" y="205" width="192" height="20.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Create Your Ride!">
                                         <attributes>
@@ -556,12 +556,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Destination" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7SQ-ZS-fQ4">
-                                <rect key="frame" x="0.0" y="217" width="414" height="34"/>
+                                <rect key="frame" x="0.0" y="245.5" width="414" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Starting Point" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pjb-Hm-7eL">
-                                <rect key="frame" x="0.0" y="259" width="414" height="34"/>
+                                <rect key="frame" x="0.0" y="287.5" width="414" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -627,19 +627,19 @@
                                 </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FY2-qo-oCF">
-                                <rect key="frame" x="17" y="766" width="374" height="30"/>
+                                <rect key="frame" x="17" y="800" width="374" height="30"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="onSubmitButton:" destination="6y7-kF-cHd" eventType="touchUpInside" id="LdR-ur-QGS"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vaccination Status" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NIi-n8-Prv">
-                                <rect key="frame" x="0.0" y="643" width="414" height="34"/>
+                                <rect key="frame" x="0.0" y="677" width="414" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Extra note" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mrt-WV-uC8">
-                                <rect key="frame" x="0.0" y="685" width="414" height="34"/>
+                                <rect key="frame" x="0.0" y="719" width="414" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -716,6 +716,13 @@
                             <constraint firstItem="VkI-RB-cGy" firstAttribute="bottom" secondItem="FY2-qo-oCF" secondAttribute="bottom" constant="12" id="yg2-SR-yuB"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="byj-si-8hG">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="f8p-Fv-O9R">
+                            <connections>
+                                <action selector="cancelButton:" destination="6y7-kF-cHd" id="d3g-bQ-GD1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="accompany" destination="1Js-kR-gCb" id="NW1-tB-9gM"/>
                         <outlet property="contact" destination="MVx-GB-Ehb" id="JJx-fS-AfD"/>
@@ -733,7 +740,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IF6-bu-yeX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4114" y="-971"/>
+            <point key="canvasLocation" x="5023.188405797102" y="-971.65178571428567"/>
         </scene>
         <!--Rides-->
         <scene sceneID="nRE-QM-RqL">
@@ -772,6 +779,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfJ-jW-3w4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1883" y="58"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="E5U-Ed-LWE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gJD-IZ-I4S" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cQR-72-t0K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6y7-kF-cHd" kind="relationship" relationship="rootViewController" id="FR1-4T-Cxe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vhE-Ld-S0u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4113.04347826087" y="-971.65178571428567"/>
         </scene>
     </scenes>
     <resources>

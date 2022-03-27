@@ -9,6 +9,7 @@ import UIKit
 import Parse
 
 class CreateRideViewController: UIViewController {
+    
     var share = false
     var request = false
     var offer = false
@@ -29,6 +30,11 @@ class CreateRideViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func cancelButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func onSubmitButton(_ sender: Any) {
