@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -101,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="965" y="-425"/>
+            <point key="canvasLocation" x="-148" y="-404"/>
         </scene>
         <!--Feed View Controller-->
         <scene sceneID="X9R-Bh-tQc">
@@ -113,7 +114,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RideCell" rowHeight="501" id="eVV-Nd-lvg" customClass="RideCell" customModule="Sride" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="501"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="501"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eVV-Nd-lvg" id="XFE-VB-Y0h">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="501"/>
@@ -427,7 +428,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJO-NX-ZPY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3148" y="58"/>
+            <point key="canvasLocation" x="3072" y="-956"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="TJC-wN-EC1">
@@ -442,12 +443,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s4c-hh-HSm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3148" y="806"/>
+            <point key="canvasLocation" x="4019" y="-1623"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="9NJ-bw-1jx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QvX-eI-imF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="r7c-Cm-VH7" customClass="ProfileViewController" customModule="Sride" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VNC-eM-c9y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -464,7 +464,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="04a-SJ-kHR">
-                                        <rect key="frame" x="0.0" y="28" width="415" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="415" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="04a-SJ-kHR" id="FPn-Ou-x3j">
                                             <rect key="frame" x="0.0" y="0.0" width="415" height="43.5"/>
@@ -507,8 +507,9 @@
                         <outlet property="profileTableView" destination="jwF-v5-cJJ" id="VNi-Bz-Uxu"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QvX-eI-imF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3966.666666666667" y="-702.45535714285711"/>
+            <point key="canvasLocation" x="2904" y="58"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="YLo-jl-u5o">
@@ -526,7 +527,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cT0-w3-f2v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2242" y="-702"/>
+            <point key="canvasLocation" x="730" y="-404"/>
         </scene>
         <!--Create Ride View Controller-->
         <scene sceneID="1Ly-Zc-iU2">
@@ -537,7 +538,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="car.2.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="20N-UX-Hcz">
-                                <rect key="frame" x="165" y="47" width="84" height="93"/>
+                                <rect key="frame" x="165" y="47" width="84" height="92.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="RRg-9U-fsI"/>
                                 </constraints>
@@ -732,7 +733,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IF6-bu-yeX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3967" y="106"/>
+            <point key="canvasLocation" x="4114" y="-971"/>
         </scene>
         <!--Rides-->
         <scene sceneID="nRE-QM-RqL">
@@ -751,12 +752,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OhM-2s-CTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2241" y="106"/>
+            <point key="canvasLocation" x="1941" y="-956"/>
         </scene>
         <!--Profile -->
         <scene sceneID="9wh-T4-eIR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mfJ-jW-3w4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="ProfileNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Ubj-yU-w01" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile " image="person" catalog="system" id="yZ6-IP-eIg"/>
                     <toolbarItems/>
@@ -769,13 +769,14 @@
                         <segue destination="r7c-Cm-VH7" kind="relationship" relationship="rootViewController" id="bQ4-e8-N3t"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfJ-jW-3w4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3147.826086956522" y="-702.45535714285711"/>
+            <point key="canvasLocation" x="1883" y="58"/>
         </scene>
     </scenes>
     <resources>
         <image name="car" catalog="system" width="128" height="93"/>
-        <image name="car.2.fill" catalog="system" width="128" height="75"/>
+        <image name="car.2.fill" catalog="system" width="128" height="73"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="AccentColor">
