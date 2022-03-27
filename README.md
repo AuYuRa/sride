@@ -26,19 +26,26 @@ Matches people who want to share a ride to the same destination
 
 **Required Must-have Stories**
 
-* User can sign up for account
-* User can log into access common feed/ log out
-* User can create new ride-post
-* User can input information about the ride in a screen
-* User can use tab bar to see who want a ride/ share a ride/ give a ride
-* Users can add comments
-* User can click on a post and see the detailed view
+- [x]  User can sign up
+- [x] User can sign in to the feed screen
+- [x] User can see posts on the feed screen.
+- [ ] Posts on the feed screen appear in a default order. Our decisionn at the moment is to set the order of urgency (rides with the date closest to current system date will appear first)
+- [x] User can click on a post and see the detail view
+- [ ] Users can see comments and add comments
+- [x] User can create new ride-post
+- [ ] User can see their newly created post on the feed screen 
+- [x] User can navigate between tabs: feed tab, profile tab.
+- [x] User can see their profile screen
+- [x] User can log out from their profile screen
+
 
 **Optional Nice-to-have Stories**
 
-* Users can chat
-* Users can upvote (review/rating)
-* User can search using a keyword
+- [ ] User can filter out posts based on characteristic (share, offer, or request), time frame, location, etc.
+- [ ] User can search for posts using keyword search bar
+- [ ] Users can upvote a post and a user (review/rating)
+- [ ] Users can chat
+
 
 ### 2. Screen Archetypes
 
@@ -104,8 +111,7 @@ Matches people who want to share a ride to the same destination
 ## Wireframes
 <img src="https://i.imgur.com/BSzOmwA.jpg">
 
-## Schema 
-[This section will be completed in Unit 9]
+
 ## Schema 
 ### Models
 #### Post
@@ -200,4 +206,5 @@ let query = PFQuery(className:"User")
 ##  Sprint 1 Updates
 
 ![](https://i.imgur.com/JTWYpQz.gif)
+
 
