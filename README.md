@@ -2,9 +2,11 @@
 
 ## Table of Contents
 1. [Overview](#Overview)
-1. [Product Spec](#Product-Spec)
-1. [Wireframes](#Wireframes)
-2. [Schema](#Schema)
+2. [Product Spec](#Product-Spec)
+3. [Wireframes](#Wireframes)
+4. [Schema](#Schema)
+5. [Sprint 1 Updates](#Sprint-1-Updates)
+
 
 ## Overview
 ### Description
@@ -193,4 +195,9 @@ let query = PFQuery(className:"User")
             }
         }
 ```
-       
+
+
+##  Sprint 1 Updates
+
+![](https://i.imgur.com/JTWYpQz.gif)
+
