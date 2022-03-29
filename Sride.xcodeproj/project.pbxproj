@@ -23,6 +23,10 @@
 		C6A846F027EE23120045991A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A846EF27EE23120045991A /* FeedViewController.swift */; };
 		C6A846F527EE25B70045991A /* CreateRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A846F427EE25B70045991A /* CreateRideViewController.swift */; };
 		C6A846FF27EE5E270045991A /* RideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A846FE27EE5E270045991A /* RideCell.swift */; };
+		ED4DB1E827F35C3200AA3FF7 /* ProfileTabStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4DB1E727F35C3200AA3FF7 /* ProfileTabStoryboard.storyboard */; };
+		ED4DB1EA27F3620900AA3FF7 /* CreatePostStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4DB1E927F3620900AA3FF7 /* CreatePostStoryboard.storyboard */; };
+		ED4DB1EC27F362F800AA3FF7 /* DetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4DB1EB27F362F800AA3FF7 /* DetailStoryboard.storyboard */; };
+		ED4DB1EE27F3640400AA3FF7 /* MainFeedStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4DB1ED27F3640400AA3FF7 /* MainFeedStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,10 @@
 		C6A846F427EE25B70045991A /* CreateRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRideViewController.swift; sourceTree = "<group>"; };
 		C6A846FE27EE5E270045991A /* RideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideCell.swift; sourceTree = "<group>"; };
 		D181BF00FA2A812D99EC54AF /* Pods-Sride.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sride.debug.xcconfig"; path = "Target Support Files/Pods-Sride/Pods-Sride.debug.xcconfig"; sourceTree = "<group>"; };
+		ED4DB1E727F35C3200AA3FF7 /* ProfileTabStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTabStoryboard.storyboard; sourceTree = "<group>"; };
+		ED4DB1E927F3620900AA3FF7 /* CreatePostStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreatePostStoryboard.storyboard; sourceTree = "<group>"; };
+		ED4DB1EB27F362F800AA3FF7 /* DetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailStoryboard.storyboard; sourceTree = "<group>"; };
+		ED4DB1ED27F3640400AA3FF7 /* MainFeedStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainFeedStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +169,10 @@
 				C6A846B327EA70050045991A /* Info.plist */,
 				C6A846F427EE25B70045991A /* CreateRideViewController.swift */,
 				C6A846FE27EE5E270045991A /* RideCell.swift */,
+				ED4DB1E727F35C3200AA3FF7 /* ProfileTabStoryboard.storyboard */,
+				ED4DB1E927F3620900AA3FF7 /* CreatePostStoryboard.storyboard */,
+				ED4DB1EB27F362F800AA3FF7 /* DetailStoryboard.storyboard */,
+				ED4DB1ED27F3640400AA3FF7 /* MainFeedStoryboard.storyboard */,
 			);
 			path = Sride;
 			sourceTree = "<group>";
@@ -293,7 +305,11 @@
 			files = (
 				C6A846B227EA70050045991A /* LaunchScreen.storyboard in Resources */,
 				C6A846AF27EA70050045991A /* Assets.xcassets in Resources */,
+				ED4DB1EC27F362F800AA3FF7 /* DetailStoryboard.storyboard in Resources */,
 				C6A846AD27EA70040045991A /* Main.storyboard in Resources */,
+				ED4DB1E827F35C3200AA3FF7 /* ProfileTabStoryboard.storyboard in Resources */,
+				ED4DB1EA27F3620900AA3FF7 /* CreatePostStoryboard.storyboard in Resources */,
+				ED4DB1EE27F3640400AA3FF7 /* MainFeedStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
