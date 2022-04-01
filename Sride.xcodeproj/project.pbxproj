@@ -27,6 +27,8 @@
 		ED4DB1EA27F3620900AA3FF7 /* CreatePostStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4DB1E927F3620900AA3FF7 /* CreatePostStoryboard.storyboard */; };
 		ED4DB1EC27F362F800AA3FF7 /* DetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4DB1EB27F362F800AA3FF7 /* DetailStoryboard.storyboard */; };
 		ED4DB1EE27F3640400AA3FF7 /* MainFeedStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4DB1ED27F3640400AA3FF7 /* MainFeedStoryboard.storyboard */; };
+		ED79CD7D27F79A0100D5A9CC /* UserPostStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED79CD7C27F79A0000D5A9CC /* UserPostStoryboard.storyboard */; };
+		ED79CD7F27F79B0100D5A9CC /* UserPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED79CD7E27F79B0100D5A9CC /* UserPostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		ED4DB1E927F3620900AA3FF7 /* CreatePostStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreatePostStoryboard.storyboard; sourceTree = "<group>"; };
 		ED4DB1EB27F362F800AA3FF7 /* DetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailStoryboard.storyboard; sourceTree = "<group>"; };
 		ED4DB1ED27F3640400AA3FF7 /* MainFeedStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainFeedStoryboard.storyboard; sourceTree = "<group>"; };
+		ED79CD7C27F79A0000D5A9CC /* UserPostStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserPostStoryboard.storyboard; sourceTree = "<group>"; };
+		ED79CD7E27F79B0100D5A9CC /* UserPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,8 @@
 				ED4DB1E927F3620900AA3FF7 /* CreatePostStoryboard.storyboard */,
 				ED4DB1EB27F362F800AA3FF7 /* DetailStoryboard.storyboard */,
 				ED4DB1ED27F3640400AA3FF7 /* MainFeedStoryboard.storyboard */,
+				ED79CD7C27F79A0000D5A9CC /* UserPostStoryboard.storyboard */,
+				ED79CD7E27F79B0100D5A9CC /* UserPostViewController.swift */,
 			);
 			path = Sride;
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 			files = (
 				C6A846B227EA70050045991A /* LaunchScreen.storyboard in Resources */,
 				C6A846AF27EA70050045991A /* Assets.xcassets in Resources */,
+				ED79CD7D27F79A0100D5A9CC /* UserPostStoryboard.storyboard in Resources */,
 				ED4DB1EC27F362F800AA3FF7 /* DetailStoryboard.storyboard in Resources */,
 				C6A846AD27EA70040045991A /* Main.storyboard in Resources */,
 				ED4DB1E827F35C3200AA3FF7 /* ProfileTabStoryboard.storyboard in Resources */,
@@ -439,6 +446,7 @@
 			files = (
 				C6A846AA27EA70040045991A /* ViewController.swift in Sources */,
 				C6A846A627EA70040045991A /* AppDelegate.swift in Sources */,
+				ED79CD7F27F79B0100D5A9CC /* UserPostViewController.swift in Sources */,
 				C6A846FF27EE5E270045991A /* RideCell.swift in Sources */,
 				C62034AE27EE9DBC0073FB5E /* DetailsViewController.swift in Sources */,
 				C6A846F027EE23120045991A /* FeedViewController.swift in Sources */,
