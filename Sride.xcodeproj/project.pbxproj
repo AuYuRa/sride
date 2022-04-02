@@ -161,24 +161,24 @@
 		C6A846A427EA70040045991A /* Sride */ = {
 			isa = PBXGroup;
 			children = (
-				C6A846EF27EE23120045991A /* FeedViewController.swift */,
-				C6A846A527EA70040045991A /* AppDelegate.swift */,
-				C6A846A727EA70040045991A /* SceneDelegate.swift */,
-				C6A846A927EA70040045991A /* ViewController.swift */,
 				C6A846AB27EA70040045991A /* Main.storyboard */,
-				C62034B227EE9F440073FB5E /* ProfileViewController.swift */,
-				C62034AD27EE9DBC0073FB5E /* DetailsViewController.swift */,
-				C6A846AE27EA70050045991A /* Assets.xcassets */,
-				C6A846B027EA70050045991A /* LaunchScreen.storyboard */,
-				C6A846B327EA70050045991A /* Info.plist */,
-				C6A846F427EE25B70045991A /* CreateRideViewController.swift */,
-				C6A846FE27EE5E270045991A /* RideCell.swift */,
-				ED4DB1E727F35C3200AA3FF7 /* ProfileTabStoryboard.storyboard */,
-				ED4DB1E927F3620900AA3FF7 /* CreatePostStoryboard.storyboard */,
-				ED4DB1EB27F362F800AA3FF7 /* DetailStoryboard.storyboard */,
+				C6A846A927EA70040045991A /* ViewController.swift */,
 				ED4DB1ED27F3640400AA3FF7 /* MainFeedStoryboard.storyboard */,
+				C6A846EF27EE23120045991A /* FeedViewController.swift */,
+				ED4DB1E927F3620900AA3FF7 /* CreatePostStoryboard.storyboard */,
+				C6A846F427EE25B70045991A /* CreateRideViewController.swift */,
+				ED4DB1EB27F362F800AA3FF7 /* DetailStoryboard.storyboard */,
+				C62034AD27EE9DBC0073FB5E /* DetailsViewController.swift */,
+				ED4DB1E727F35C3200AA3FF7 /* ProfileTabStoryboard.storyboard */,
+				C62034B227EE9F440073FB5E /* ProfileViewController.swift */,
 				ED79CD7C27F79A0000D5A9CC /* UserPostStoryboard.storyboard */,
 				ED79CD7E27F79B0100D5A9CC /* UserPostViewController.swift */,
+				C6A846FE27EE5E270045991A /* RideCell.swift */,
+				C6A846A527EA70040045991A /* AppDelegate.swift */,
+				C6A846A727EA70040045991A /* SceneDelegate.swift */,
+				C6A846B027EA70050045991A /* LaunchScreen.storyboard */,
+				C6A846AE27EA70050045991A /* Assets.xcassets */,
+				C6A846B327EA70050045991A /* Info.plist */,
 			);
 			path = Sride;
 			sourceTree = "<group>";

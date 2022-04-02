@@ -8,7 +8,7 @@
 import UIKit
 
 class RideCell: UITableViewCell {
-
+    
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var destinationLabel: UILabel!

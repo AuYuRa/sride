@@ -13,14 +13,36 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var tableView: UITableView!
     
     var rides = [PFObject]()
-    @IBAction func createRide(_ sender: Any) {
-    }
+    
+    @IBAction func createRide(_ sender: Any) {}
+    
+    @IBOutlet weak var popupButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
-
+        
+        if #available(iOS 15.0, *) {
+            popupButton.changesSelectionAsPrimaryAction = true
+            popupButton.showsMenuAsPrimaryAction = true
+        } else {
+            // Fallback on earlier versions
+            print("This feature is only available for iOS 15.0")
+        }
+        
+        
+        let optionsClosure = { (action: UIAction) in
+             print(action.title)
+            // self.tableView.reloadData()
+            
+           }
+           popupButton.menu = UIMenu(children: [
+             UIAction(title: "All", state: .on, handler: optionsClosure),
+             UIAction(title: "Share", handler: optionsClosure)
+           ])
+        
         // Do any additional setup after loading the view.
     }
     

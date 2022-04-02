@@ -27,8 +27,11 @@ class ViewController: UIViewController {
                 print("Successfully signing up.")
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             }
-            else {
-                print("Error: \(error?.localizedDescription)")
+//            else {
+//                print("Error: \(error?.localizedDescription)")
+//            }
+            else if let error = error {
+                print(error.localizedDescription)
             }
         }
     }
