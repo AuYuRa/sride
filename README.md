@@ -211,10 +211,8 @@ let query = PFQuery(className:"User")
 
 ## Sprint 2 Updates
 
-
-
 https://user-images.githubusercontent.com/93749279/161398224-efd455d1-9f42-493a-afd7-77a93cc07d18.mov
 
-
+http://g.recordit.co/70RY9i4WCi.gif
 
 
