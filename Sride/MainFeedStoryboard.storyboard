@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +18,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RideCell" rowHeight="501" id="G6b-MO-1be" customClass="RideCell" customModule="Sride" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="501"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="501"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G6b-MO-1be" id="Pgj-Ek-ZXH">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="501"/>
@@ -162,9 +160,6 @@
                                             <rect key="frame" x="30" y="439" width="40" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="More "/>
-                                            <connections>
-                                                <segue destination="kte-Lo-Njt" kind="presentation" id="dh6-aj-WC5"/>
-                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -315,21 +310,16 @@
                                     <outlet property="timeFrameLabel" destination="fyz-qf-VWf" id="0mT-vM-GFv"/>
                                     <outlet property="usernameLabel" destination="FIw-lV-7wm" id="goS-ej-Wlb"/>
                                     <outlet property="vaccinatedLabel" destination="HoC-WK-j9r" id="CaS-EG-mEo"/>
+                                    <segue destination="kte-Lo-Njt" kind="presentation" identifier="DetailView" id="OCc-o4-F5R"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" id="9Qd-54-ljp">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="h98-Xr-YWu">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" id="eMM-we-uhT">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="eMM-we-uhT">
                                 <rect key="frame" x="20" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <menu key="menu" id="sTM-oT-S48">
-                                    <children>
-                                        <command title="All" id="uEG-aL-1WU"/>
-                                        <command title="Share" id="RQb-P1-aP4"/>
-                                    </children>
-                                </menu>
                                 <state key="normal" title="Button"/>
                             </button>
                         </barButtonItem>

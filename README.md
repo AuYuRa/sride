@@ -26,17 +26,17 @@ Matches people who want to share a ride to the same destination
 
 **Required Must-have Stories**
 
-- [x]  User can sign up
+- [x] User can sign up
 - [x] User can sign in to the feed screen
 - [x] User can see posts on the feed screen.
-- [ ] Posts on the feed screen appear in a default order. Our decisionn at the moment is to set the order of urgency (rides with the date closest to current system date will appear first)
 - [x] User can click on a post and see the detail view
 - [ ] Users can see comments and add comments
 - [x] User can create new ride-post
-- [ ] User can see their newly created post on the feed screen 
+- [x] User can see their newly created post on the feed screen 
 - [x] User can navigate between tabs: feed tab, profile tab.
 - [x] User can see their profile screen
 - [x] User can log out from their profile screen
+- [x] User can see history of their own posts in profile page
 
 
 **Optional Nice-to-have Stories**
@@ -45,6 +45,8 @@ Matches people who want to share a ride to the same destination
 - [ ] User can search for posts using keyword search bar
 - [ ] Users can upvote a post and a user (review/rating)
 - [ ] Users can chat
+- [ ] Users can add a profile picture
+- [ ] Posts on the feed screen appear in a default order. Our decisionn at the moment is to set the order of urgency (rides with the date closest to current system date will appear first)
 
 
 ### 2. Screen Archetypes
@@ -207,4 +209,9 @@ let query = PFQuery(className:"User")
 
 ![](https://i.imgur.com/JTWYpQz.gif)
 
+## Sprint 2 Updates
+
+https://user-images.githubusercontent.com/93749279/161398224-efd455d1-9f42-493a-afd7-77a93cc07d18.mov
+
+<img src='http://g.recordit.co/70RY9i4WCi.gif' title='Video Walkthrough Part II' width='' alt='Video Walkthrough Part II' />
 

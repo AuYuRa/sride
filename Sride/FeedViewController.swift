@@ -25,7 +25,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         
         if #available(iOS 15.0, *) {
-            popupButton.changesSelectionAsPrimaryAction = true
+            //popupButton.changesSelectionAsPrimaryAction = true
             popupButton.showsMenuAsPrimaryAction = true
         } else {
             // Fallback on earlier versions
@@ -50,7 +50,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidAppear(animated)
         
         let query = PFQuery(className: "Rides")
-        query.includeKey("accountOwner")
+        query.includeKeys(["accountOwner", "comments", "comments.author"])
         query.limit = 20
         
         query.findObjectsInBackground { (rides, error) in
@@ -85,14 +85,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if(segue.identifier == "DetailView") {
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPath(for: cell)
+            let ride = rides[indexPath!.row]
+
+            let detailsViewController = segue.destination as! DetailsViewController
+
+            detailsViewController.ride = ride
+        }
     }
-    */
 
 }
