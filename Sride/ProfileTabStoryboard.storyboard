@@ -23,20 +23,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PwS-9R-uAf">
-                                <rect key="frame" x="0.0" y="303" width="415" height="593"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XZD-5y-ilL">
-                                        <rect key="frame" x="0.0" y="44.5" width="415" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XZD-5y-ilL" id="zm3-pC-GwD">
-                                            <rect key="frame" x="0.0" y="0.0" width="415" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GTN-xK-JXX">
                                 <rect key="frame" x="138" y="103.5" width="139" height="131"/>
                                 <constraints>
@@ -44,20 +30,28 @@
                                     <constraint firstAttribute="height" constant="134" id="sxM-Tb-qYd"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHo-qQ-F7a">
+                                <rect key="frame" x="5" y="323" width="404" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="My posts"/>
+                                <connections>
+                                    <segue destination="TIU-Vh-GfA" kind="presentation" id="qHw-vX-3gk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rvu-f4-zg3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="GTN-xK-JXX" firstAttribute="leading" secondItem="Rvu-f4-zg3" secondAttribute="leading" constant="138" id="3S6-PN-65y"/>
                             <constraint firstItem="feB-JI-4xD" firstAttribute="top" secondItem="GTN-xK-JXX" secondAttribute="bottom" constant="16" id="M7w-oJ-BpW"/>
-                            <constraint firstItem="PwS-9R-uAf" firstAttribute="centerX" secondItem="feB-JI-4xD" secondAttribute="centerX" id="NYz-bB-702"/>
+                            <constraint firstItem="xHo-qQ-F7a" firstAttribute="centerX" secondItem="35G-1v-r5g" secondAttribute="centerX" id="Nc9-21-MTo"/>
                             <constraint firstItem="GTN-xK-JXX" firstAttribute="top" secondItem="Rvu-f4-zg3" secondAttribute="top" constant="14" id="O5n-43-fPw"/>
-                            <constraint firstItem="PwS-9R-uAf" firstAttribute="leading" secondItem="35G-1v-r5g" secondAttribute="leading" id="Wgb-39-zIB"/>
-                            <constraint firstAttribute="bottom" secondItem="PwS-9R-uAf" secondAttribute="bottom" id="fS5-wb-zaC"/>
+                            <constraint firstItem="Rvu-f4-zg3" firstAttribute="trailing" secondItem="xHo-qQ-F7a" secondAttribute="trailing" constant="5" id="Qfe-lu-kD8"/>
+                            <constraint firstItem="xHo-qQ-F7a" firstAttribute="top" secondItem="feB-JI-4xD" secondAttribute="bottom" constant="50" id="Vc9-Sc-gAy"/>
+                            <constraint firstItem="xHo-qQ-F7a" firstAttribute="leading" secondItem="Rvu-f4-zg3" secondAttribute="leading" constant="5" id="kEE-CW-Erq"/>
                             <constraint firstItem="Rvu-f4-zg3" firstAttribute="trailing" secondItem="feB-JI-4xD" secondAttribute="trailing" constant="167" id="lUp-AU-jH3"/>
                             <constraint firstItem="Rvu-f4-zg3" firstAttribute="trailing" secondItem="GTN-xK-JXX" secondAttribute="trailing" constant="137" id="lpk-Vn-cT1"/>
                             <constraint firstItem="feB-JI-4xD" firstAttribute="leading" secondItem="Rvu-f4-zg3" secondAttribute="leading" constant="168" id="ry0-tS-rPK"/>
-                            <constraint firstItem="PwS-9R-uAf" firstAttribute="top" secondItem="feB-JI-4xD" secondAttribute="bottom" constant="30" id="wDA-Yx-Tk2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="W7q-Pz-z4z">
@@ -67,13 +61,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="profileTableView" destination="PwS-9R-uAf" id="hrw-xv-iid"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHt-1S-rwq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2904" y="58"/>
+            <point key="canvasLocation" x="2902.898550724638" y="57.589285714285708"/>
+        </scene>
+        <!--UserPostViewController-->
+        <scene sceneID="l3L-3z-vZy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UserPostStoryboard" referencedIdentifier="UserPostViewController" id="TIU-Vh-GfA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m8i-JA-kMR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3516" y="197"/>
         </scene>
         <!--Profile -->
         <scene sceneID="FGo-iZ-CGH">
