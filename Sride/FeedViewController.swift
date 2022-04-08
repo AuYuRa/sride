@@ -25,7 +25,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         
         if #available(iOS 15.0, *) {
-            //popupButton.changesSelectionAsPrimaryAction = true
+            popupButton.changesSelectionAsPrimaryAction = true
             popupButton.showsMenuAsPrimaryAction = true
         } else {
             // Fallback on earlier versions
@@ -34,13 +34,74 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         
         let optionsClosure = { (action: UIAction) in
-             print(action.title)
-            // self.tableView.reloadData()
-            
-           }
+            print(action.title)
+            let query = PFQuery(className: "Rides")
+            query.includeKeys(["accountOwner", "comments", "comments.author"])
+            query.order(byDescending: "createdAt")
+            query.limit = 20
+            query.findObjectsInBackground { (rides, error) in
+                if rides != nil{
+                    self.rides = rides!
+                    self.tableView.reloadData()
+                }
+
+            }
+        }
+        
+        let optionsClosureShare = { (action: UIAction) in
+            print(action.title)
+            let query = PFQuery(className: "Rides")
+            query.includeKeys(["accountOwner", "comments", "comments.author"])
+            query.order(byDescending: "createdAt")
+            query.limit = 20
+            query.whereKey("Share", equalTo: true) // -> filter out Share posts
+            query.findObjectsInBackground { (rides, error) in
+                if rides != nil{
+                    self.rides = rides!
+                    self.tableView.reloadData()
+                }
+                
+            }
+        }
+        
+        let optionsClosureRequest = { (action: UIAction) in
+            print(action.title)
+            let query = PFQuery(className: "Rides")
+            query.includeKeys(["accountOwner", "comments", "comments.author"])
+            query.order(byDescending: "createdAt")
+            query.limit = 20
+            query.whereKey("Request", equalTo: true) // -> filter out Share posts
+            query.findObjectsInBackground { (rides, error) in
+                if rides != nil{
+                    self.rides = rides!
+                    self.tableView.reloadData()
+                }
+                
+            }
+        }
+        
+        let optionsClosureOffer = { (action: UIAction) in
+            print(action.title)
+            let query = PFQuery(className: "Rides")
+            query.includeKeys(["accountOwner", "comments", "comments.author"])
+            query.order(byDescending: "createdAt")
+            query.limit = 20
+            query.whereKey("Offer", equalTo: true) // -> filter out Share posts
+            query.findObjectsInBackground { (rides, error) in
+                if rides != nil{
+                    self.rides = rides!
+                    self.tableView.reloadData()
+                }
+                
+            }
+        }
+        
+        
            popupButton.menu = UIMenu(children: [
              UIAction(title: "All", state: .on, handler: optionsClosure),
-             UIAction(title: "Share", handler: optionsClosure)
+             UIAction(title: "Share", handler: optionsClosureShare),
+             UIAction(title: "Request", handler: optionsClosureRequest),
+             UIAction(title: "Offer", handler: optionsClosureOffer),
            ])
         
         // Do any additional setup after loading the view.
@@ -52,7 +113,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let query = PFQuery(className: "Rides")
         query.includeKeys(["accountOwner", "comments", "comments.author"])
         query.limit = 20
-        
+        query.order(byDescending: "createdAt")
         query.findObjectsInBackground { (rides, error) in
             if rides != nil{
                 self.rides = rides!

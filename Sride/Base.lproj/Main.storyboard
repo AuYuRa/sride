@@ -113,8 +113,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ctk-Mk-I76" kind="relationship" relationship="viewControllers" id="NSo-bX-XYS"/>
                         <segue destination="WeK-bc-Osl" kind="relationship" relationship="viewControllers" id="EL1-dn-8pg"/>
+                        <segue destination="ctk-Mk-I76" kind="relationship" relationship="viewControllers" id="NSo-bX-XYS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cT0-w3-f2v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
