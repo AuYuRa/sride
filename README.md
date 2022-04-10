@@ -28,9 +28,9 @@ Matches people who want to share a ride to the same destination
 
 - [x] User can sign up
 - [x] User can sign in to the feed screen
-- [x] User can see posts on the feed screen in order of newest post first.
+- [x] User can see posts on the feed screen.
 - [x] User can click on a post and see the detail view
-- [x] Users can see comments and add comments
+- [ ] Users can see comments and add comments
 - [x] User can create new ride-post
 - [x] User can see their newly created post on the feed screen 
 - [x] User can navigate between tabs: feed tab, profile tab.
@@ -41,12 +41,12 @@ Matches people who want to share a ride to the same destination
 
 **Optional Nice-to-have Stories**
 
-- [x] User can filter out posts based on characteristic (share, offer, or request), time frame, location, etc.
+- [ ] User can filter out posts based on characteristic (share, offer, or request), time frame, location, etc.
 - [ ] User can search for posts using keyword search bar
 - [ ] Users can upvote a post and a user (review/rating)
 - [ ] Users can chat
 - [ ] Users can add a profile picture
-- [ ] Posts on the feed screen appear in the order of urgency (rides with the date closest to current system date will appear first)
+- [ ] Posts on the feed screen appear in a default order. Our decisionn at the moment is to set the order of urgency (rides with the date closest to current system date will appear first)
 
 
 ### 2. Screen Archetypes
@@ -214,8 +214,4 @@ let query = PFQuery(className:"User")
 https://user-images.githubusercontent.com/93749279/161398224-efd455d1-9f42-493a-afd7-77a93cc07d18.mov
 
 <img src='http://g.recordit.co/70RY9i4WCi.gif' title='Video Walkthrough Part II' width='' alt='Video Walkthrough Part II' />
-
-## Sprint 3 Updates
-
-![Screen Recording 2022-04-09 at 9 08 36 PM (1)](https://user-images.githubusercontent.com/60333098/162597910-69fddf9e-94c6-433b-a1d5-9633276fb7f8.gif)
 

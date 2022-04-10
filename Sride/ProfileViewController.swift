@@ -10,6 +10,10 @@ import Parse
 import AlamofireImage
 
 class ProfileViewController: UIViewController {
+    
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    var currentUser = PFUser.current()
 
     
     override func viewDidLoad() {
@@ -18,6 +22,11 @@ class ProfileViewController: UIViewController {
         print("ProfileTab viewDidLoad()")
 
         // Do any additional setup after loading the view.
+        //let user = PFObject(className: "User")
+        usernameLabel.text = currentUser?.username
+        
+        
+        
     }
     
 

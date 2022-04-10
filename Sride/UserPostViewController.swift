@@ -26,12 +26,12 @@ class UserPostViewController: UIViewController, UITableViewDelegate, UITableView
         cell.destinationLabel.text = (post["Destination"] as! String)
         cell.startLabel.text = (post["StartingPoint"] as! String)
         cell.dateLabel.text = (post["DateOfRide"] as! String)
-        cell.timeFrameLabel.text = (post["timeFrame"] as! String)
+        //cell.timeFrameLabel.text = (post["timeFrame"] as! String)
         cell.nameLabel.text = (post["Name"] as! String)
-        cell.accompanyLabel.text = (post["Accompany"] as! String)
-        cell.contactLabel.text = (post["Contact"] as! String)
-        cell.noteLabel.text = (post["ExtraNote"] as! String)
-        cell.vaccinatedLabel.text = (post["vaccination"] as! String)
+        //cell.accompanyLabel.text = (post["Accompany"] as! String)
+        //cell.contactLabel.text = (post["Contact"] as! String)
+        //cell.noteLabel.text = (post["ExtraNote"] as! String)
+        //cell.vaccinatedLabel.text = (post["vaccination"] as! String)
         
         return cell
     }
@@ -49,7 +49,7 @@ class UserPostViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let query = PFQuery(className: "Rides")
-        query.includeKey("accountOwner")
+        query.includeKeys(["accountOwner", "comments", "comments.author"])
         // Only query post made by the current user
         query.whereKey("accountOwner", equalTo: PFUser.current()!)
         // query.whereKey("Share", equalTo: true) -> filter out Share posts
@@ -63,14 +63,18 @@ class UserPostViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if(segue.identifier == "DetailView") {
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPath(for: cell)
+            let ride = posts[indexPath!.row]
+
+            let detailsViewController = segue.destination as! DetailsViewController
+
+            detailsViewController.ride = ride
+        }
     }
-    */
+     
+
 
 }
