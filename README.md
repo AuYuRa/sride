@@ -215,3 +215,7 @@ https://user-images.githubusercontent.com/93749279/161398224-efd455d1-9f42-493a-
 
 <img src='http://g.recordit.co/70RY9i4WCi.gif' title='Video Walkthrough Part II' width='' alt='Video Walkthrough Part II' />
 
+## Sprint 3 Updates
+![ezgif-4-237f986234](https://user-images.githubusercontent.com/60333098/162597533-2dfa98f4-0b2c-4e05-9f43-cadcbb643ee6.gif)
+
+
