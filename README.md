@@ -28,9 +28,9 @@ Matches people who want to share a ride to the same destination
 
 - [x] User can sign up
 - [x] User can sign in to the feed screen
-- [x] User can see posts on the feed screen.
+- [x] User can see posts on the feed screen in order of newest post first.
 - [x] User can click on a post and see the detail view
-- [ ] Users can see comments and add comments
+- [x] Users can see comments and add comments
 - [x] User can create new ride-post
 - [x] User can see their newly created post on the feed screen 
 - [x] User can navigate between tabs: feed tab, profile tab.
@@ -41,12 +41,12 @@ Matches people who want to share a ride to the same destination
 
 **Optional Nice-to-have Stories**
 
-- [ ] User can filter out posts based on characteristic (share, offer, or request), time frame, location, etc.
+- [x] User can filter out posts based on characteristic (share, offer, or request), time frame, location, etc.
 - [ ] User can search for posts using keyword search bar
 - [ ] Users can upvote a post and a user (review/rating)
 - [ ] Users can chat
 - [ ] Users can add a profile picture
-- [ ] Posts on the feed screen appear in a default order. Our decisionn at the moment is to set the order of urgency (rides with the date closest to current system date will appear first)
+- [ ] Posts on the feed screen appear in the order of urgency (rides with the date closest to current system date will appear first)
 
 
 ### 2. Screen Archetypes
