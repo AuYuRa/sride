@@ -14,6 +14,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var rides = [PFObject]()
     
+    
     @IBAction func createRide(_ sender: Any) {}
     
     @IBOutlet weak var popupButton: UIButton!
@@ -24,8 +25,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
-        if #available(iOS 15.0, *) {
-            popupButton.changesSelectionAsPrimaryAction = true
+        if #available(iOS 10.0, *) {
+            
+            //popupButton.changesSelectionAsPrimaryAction = true
             popupButton.showsMenuAsPrimaryAction = true
         } else {
             // Fallback on earlier versions
@@ -135,12 +137,70 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.destinationLabel.text = (ride["Destination"] as! String)
         cell.startLabel.text = (ride["StartingPoint"] as! String)
         cell.dateLabel.text = (ride["DateOfRide"] as! String)
-        cell.timeFrameLabel.text = (ride["timeFrame"] as! String)
+        
+        cell.dateLabel.backgroundColor = UIColor.white
+        //cell.dateLabel.layer.masksToBounds = true
+        cell.dateLabel.layer.cornerRadius = 20.0
+        
+        //cell.timeFrameLabel.text = (ride["timeFrame"] as! String)
         cell.nameLabel.text = (ride["Name"] as! String)
-        cell.accompanyLabel.text = (ride["Accompany"] as! String)
-        cell.contactLabel.text = (ride["Contact"] as! String)
-        cell.noteLabel.text = (ride["ExtraNote"] as! String)
-        cell.vaccinatedLabel.text = (ride["vaccination"] as! String)
+        cell.nameLabel.backgroundColor = UIColor.white
+        //cell.dateLabel.layer.masksToBounds = true
+        cell.nameLabel.layer.cornerRadius = 20.0
+        
+    
+        
+        
+//        cell.startLabel.layer.borderWidth = 2.0
+//        cell.startLabel.layer.borderColor = UIColor.init(red: 1, green: 213/255, blue: 248/255, alpha: 1).cgColor
+//        cell.startLabel.layer.cornerRadius = 10
+//
+//        cell.destinationLabel.layer.borderWidth = 2.0
+//        cell.destinationLabel.layer.borderColor = UIColor.init(red: 1, green: 213/255, blue: 248/255, alpha: 1).cgColor
+//        cell.destinationLabel.layer.cornerRadius = 10
+        
+        cell.shareLabel.textColor = UIColor.clear
+        cell.offerLabel.textColor = UIColor.clear
+        cell.requestLabel.textColor = UIColor.clear
+        
+        cell.shareLabel.layer.borderColor = UIColor.clear.cgColor
+        cell.requestLabel.layer.borderColor = UIColor.clear.cgColor
+        cell.offerLabel.layer.borderColor = UIColor.clear.cgColor
+        
+        cell.shareLabel.backgroundColor = UIColor.clear
+        cell.requestLabel.backgroundColor = UIColor.clear
+        cell.offerLabel.backgroundColor = UIColor.clear
+        
+
+        
+
+        if ride["Share"] as! Bool{
+            cell.shareLabel.backgroundColor = UIColor.init(red: 193/255, green: 255/255, blue: 220, alpha: 0.75)
+            cell.shareLabel.layer.borderWidth = 1.0
+            cell.shareLabel.layer.borderColor = UIColor.systemIndigo.cgColor
+            cell.shareLabel.layer.cornerRadius = 10
+            cell.shareLabel.textColor = UIColor.black
+
+        }
+        if ride["Request"] as! Bool{
+            cell.requestLabel.backgroundColor = UIColor.init(red: 193/255, green: 255/255, blue: 220, alpha: 0.75)
+            cell.requestLabel.layer.borderWidth = 1.0
+            cell.requestLabel.layer.borderColor = UIColor.systemIndigo.cgColor
+            cell.requestLabel.layer.cornerRadius = 10
+            cell.requestLabel.textColor = UIColor.black
+
+        }
+        if ride["Offer"] as! Bool{
+            //cell.offerLabel.backgroundColor = UIColor.green
+            cell.offerLabel.backgroundColor = UIColor.init(red: 193/255, green: 255/255, blue: 220, alpha: 0.75)
+            cell.offerLabel.layer.borderWidth = 1.0
+            cell.offerLabel.textColor = UIColor.black
+            cell.offerLabel.layer.cornerRadius = 10
+            cell.offerLabel.layer.borderColor = UIColor.systemIndigo.cgColor
+
+        }
+        
+
         
         return cell
     }

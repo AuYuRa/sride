@@ -10,9 +10,14 @@ import Parse
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    
     override func viewDidLoad() {
+        loginButton.layer.cornerRadius = 20
+        signupButton.layer.cornerRadius = 20
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
