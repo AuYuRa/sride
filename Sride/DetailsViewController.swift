@@ -62,6 +62,37 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
        contact.text = (ride?["Contact"] as! String)
        extra.text = (ride?["ExtraNote"] as! String)
        vaccination.text = (ride?["vaccination"] as! String)
+       sharing.textColor = UIColor.clear
+       requesting.textColor = UIColor.clear
+       offering.textColor = UIColor.clear
+       
+    
+    if ride?["Share"] as! Bool {
+
+        sharing.layer.borderWidth = 1.0
+        sharing.layer.borderColor = UIColor.systemIndigo.cgColor
+        sharing.layer.cornerRadius = 10
+        sharing.textColor = UIColor.black
+        
+        }
+    if ride?["Request"] as! Bool {
+
+        
+        requesting.layer.borderWidth = 1.0
+        requesting.layer.borderColor = UIColor.systemIndigo.cgColor
+        requesting.layer.cornerRadius = 10
+        requesting.textColor = UIColor.black
+        
+        }
+    if ride?["Offer"] as! Bool {
+
+        
+        offering.layer.borderWidth = 1.0
+        offering.layer.borderColor = UIColor.systemIndigo.cgColor
+        offering.layer.cornerRadius = 10
+        offering.textColor = UIColor.black
+        
+        }
        
    }
    
