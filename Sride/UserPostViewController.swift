@@ -11,23 +11,71 @@ import Parse
 class UserPostViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    var posts = [PFObject]()
+    var rides = [PFObject]()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return rides.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RideCell") as! RideCell
-        let post = posts[indexPath.row]
+        let ride = rides[indexPath.row]
         
-        let user = post["accountOwner"] as! PFUser
+        let user = ride["accountOwner"] as! PFUser
         cell.usernameLabel.text = user.username
-        cell.destinationLabel.text = (post["Destination"] as! String)
-        cell.startLabel.text = (post["StartingPoint"] as! String)
-        cell.dateLabel.text = (post["DateOfRide"] as! String)
+        cell.destinationLabel.text = (ride["Destination"] as! String)
+        cell.startLabel.text = (ride["StartingPoint"] as! String)
+        cell.dateLabel.text = (ride["DateOfRide"] as! String)
+        
+        cell.dateLabel.backgroundColor = UIColor.white
+        //cell.dateLabel.layer.masksToBounds = true
+        cell.dateLabel.layer.cornerRadius = 20.0
+        
+        //cell.timeFrameLabel.text = (ride["timeFrame"] as! String)
+        cell.nameLabel.text = (ride["Name"] as! String)
+        cell.nameLabel.backgroundColor = UIColor.white
+        //cell.dateLabel.layer.masksToBounds = true
+        cell.nameLabel.layer.cornerRadius = 20.0
+        
+        
+        cell.shareLabel.textColor = UIColor.clear
+        cell.offerLabel.textColor = UIColor.clear
+        cell.requestLabel.textColor = UIColor.clear
+        
+        cell.shareLabel.layer.borderColor = UIColor.clear.cgColor
+        cell.requestLabel.layer.borderColor = UIColor.clear.cgColor
+        cell.offerLabel.layer.borderColor = UIColor.clear.cgColor
+        
+        cell.shareLabel.backgroundColor = UIColor.clear
+        cell.requestLabel.backgroundColor = UIColor.clear
+        cell.offerLabel.backgroundColor = UIColor.clear
 
-        cell.nameLabel.text = (post["Name"] as! String)
+        if ride["Share"] as! Bool{
+            cell.shareLabel.backgroundColor = UIColor.init(red: 193/255, green: 255/255, blue: 220, alpha: 0.75)
+            cell.shareLabel.layer.borderWidth = 1.0
+            cell.shareLabel.layer.borderColor = UIColor.systemIndigo.cgColor
+            cell.shareLabel.layer.cornerRadius = 10
+            cell.shareLabel.textColor = UIColor.black
+
+        }
+        if ride["Request"] as! Bool{
+            cell.requestLabel.backgroundColor = UIColor.init(red: 193/255, green: 255/255, blue: 220, alpha: 0.75)
+            cell.requestLabel.layer.borderWidth = 1.0
+            cell.requestLabel.layer.borderColor = UIColor.systemIndigo.cgColor
+            cell.requestLabel.layer.cornerRadius = 10
+            cell.requestLabel.textColor = UIColor.black
+
+        }
+        if ride["Offer"] as! Bool{
+            //cell.offerLabel.backgroundColor = UIColor.green
+            cell.offerLabel.backgroundColor = UIColor.init(red: 193/255, green: 255/255, blue: 220, alpha: 0.75)
+            cell.offerLabel.layer.borderWidth = 1.0
+            cell.offerLabel.textColor = UIColor.black
+            cell.offerLabel.layer.cornerRadius = 10
+            cell.offerLabel.layer.borderColor = UIColor.systemIndigo.cgColor
+
+        }
+        
 
         
         return cell
@@ -49,12 +97,12 @@ class UserPostViewController: UIViewController, UITableViewDelegate, UITableView
         query.includeKeys(["accountOwner", "comments", "comments.author"])
         // Only query post made by the current user
         query.whereKey("accountOwner", equalTo: PFUser.current()!)
-        // query.whereKey("Share", equalTo: true) -> filter out Share posts
+        query.order(byDescending: "createdAt")
         query.limit = 20
         
-        query.findObjectsInBackground { posts, error in
-            if posts != nil {
-                self.posts = posts!
+        query.findObjectsInBackground { rides, error in
+            if rides != nil {
+                self.rides = rides!
                 self.tableView.reloadData()
             }
         }
@@ -64,7 +112,7 @@ class UserPostViewController: UIViewController, UITableViewDelegate, UITableView
         if(segue.identifier == "DetailView") {
             let cell = sender as! UITableViewCell
             let indexPath = tableView.indexPath(for: cell)
-            let ride = posts[indexPath!.row]
+            let ride = rides[indexPath!.row]
 
             let detailsViewController = segue.destination as! DetailsViewController
 
