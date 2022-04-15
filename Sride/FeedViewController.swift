@@ -26,9 +26,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         
         // for iMac, change from iOS 15.0 to a lower version
-        if #available(iOS 15.0, *) {
+        if #available(iOS 10.0, *) {
             
-            popupButton.changesSelectionAsPrimaryAction = true // for iMac, comment this line out
+            //popupButton.changesSelectionAsPrimaryAction = true // for iMac, comment this line out
             popupButton.showsMenuAsPrimaryAction = true
         } else {
             // Fallback on earlier versions
