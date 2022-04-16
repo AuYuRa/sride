@@ -12,6 +12,7 @@ import AlamofireImage
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var myPostButton: UIButton!
+    
     @IBOutlet weak var usernameLabel: UILabel!
     
     var currentUser = PFUser.current()

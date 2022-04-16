@@ -53,9 +53,9 @@
                                                 <constraint firstAttribute="height" constant="40" id="jky-Ci-Yyb"/>
                                             </constraints>
                                             <attributedString key="attributedText">
-                                                <fragment content="StartPoint">
+                                                <fragment content="Start Point">
                                                     <attributes>
-                                                        <font key="NSFont" size="30" name="Palatino-Roman"/>
+                                                        <font key="NSFont" size="24" name="Palatino-Roman"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -73,7 +73,7 @@
                                             <attributedString key="attributedText">
                                                 <fragment content="Destination">
                                                     <attributes>
-                                                        <font key="NSFont" size="30" name="Palatino-Roman"/>
+                                                        <font key="NSFont" size="24" name="Palatino-Roman"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -162,7 +162,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.right.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iVI-4I-bHZ">
-                                            <rect key="frame" x="166" y="65.5" width="85" height="39"/>
+                                            <rect key="frame" x="164.5" y="65.5" width="85" height="39"/>
                                             <color key="tintColor" systemColor="systemIndigoColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="85" id="08R-sb-9o0"/>
@@ -250,7 +250,6 @@
                                         <constraint firstItem="CeB-B8-TYj" firstAttribute="leading" secondItem="AqX-qb-VUB" secondAttribute="trailing" constant="76" id="fNW-hc-SEL"/>
                                         <constraint firstItem="SeX-dm-7Px" firstAttribute="leading" secondItem="h2V-MR-gAX" secondAttribute="trailing" constant="6" id="fcX-o5-5hJ"/>
                                         <constraint firstItem="xqV-DQ-EPP" firstAttribute="leading" secondItem="Pgj-Ek-ZXH" secondAttribute="leading" id="fuf-Ps-wM8"/>
-                                        <constraint firstItem="iVI-4I-bHZ" firstAttribute="leading" secondItem="8q6-gV-eaW" secondAttribute="trailing" constant="1" id="fzQ-bj-m5n"/>
                                         <constraint firstItem="4Gn-4w-AQc" firstAttribute="top" secondItem="mSN-pU-9Lu" secondAttribute="bottom" constant="17" id="hBr-4n-OEx"/>
                                         <constraint firstItem="FIw-lV-7wm" firstAttribute="trailing" secondItem="Pgj-Ek-ZXH" secondAttribute="trailingMargin" id="ia9-w9-u5N"/>
                                         <constraint firstItem="iVI-4I-bHZ" firstAttribute="centerY" secondItem="8q6-gV-eaW" secondAttribute="centerY" constant="-2" id="jC2-T1-jJm"/>
@@ -259,6 +258,7 @@
                                         <constraint firstItem="iVI-4I-bHZ" firstAttribute="top" secondItem="FIw-lV-7wm" secondAttribute="bottom" constant="22" id="kyq-E3-7My"/>
                                         <constraint firstItem="b2g-8S-JKB" firstAttribute="top" secondItem="AqX-qb-VUB" secondAttribute="bottom" constant="6" id="lMq-YH-pHF"/>
                                         <constraint firstItem="mSN-pU-9Lu" firstAttribute="top" secondItem="h2V-MR-gAX" secondAttribute="bottom" constant="9" id="lfK-0R-R0u"/>
+                                        <constraint firstItem="iVI-4I-bHZ" firstAttribute="centerX" secondItem="Pgj-Ek-ZXH" secondAttribute="centerX" id="no0-zA-a5M"/>
                                         <constraint firstItem="b2g-8S-JKB" firstAttribute="top" secondItem="4Gn-4w-AQc" secondAttribute="bottom" constant="8" id="vFD-z7-6rR"/>
                                     </constraints>
                                 </tableViewCellContentView>

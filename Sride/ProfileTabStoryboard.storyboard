@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sin-lG-iXE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sin-lG-iXE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,90 +18,88 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GTN-xK-JXX">
-                                <rect key="frame" x="138" y="110.5" width="138" height="131"/>
+                                <rect key="frame" x="132" y="129.5" width="150" height="147"/>
                                 <color key="tintColor" red="1" green="0.8079432314277547" blue="0.93956386318747986" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Abn-h7-BUy"/>
+                                    <constraint firstAttribute="width" constant="150" id="d3r-qh-Xwb"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xHo-qQ-F7a">
-                                <rect key="frame" x="20" y="316" width="374" height="46"/>
-                                <color key="backgroundColor" red="0.87484711410000005" green="0.86806023119999998" blue="0.78458183999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="KdA-LE-s4C"/>
-                                </constraints>
-                                <state key="normal" title="My Posts">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="My Posts">
-                                            <attributes>
-                                                <color key="NSColor" systemColor="labelColor"/>
-                                                <font key="NSFont" size="15" name="Palatino-Roman"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <segue destination="TIU-Vh-GfA" kind="presentation" id="qHw-vX-3gk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N3U-UL-SfC">
-                                <rect key="frame" x="20" y="370" width="374" height="46"/>
-                                <color key="backgroundColor" red="0.87484711410000005" green="0.86806023119999998" blue="0.78458183999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="HEP-Ac-IOm"/>
-                                </constraints>
-                                <state key="normal" title="Logout">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Logout">
-                                            <attributes>
-                                                <color key="NSColor" systemColor="labelColor"/>
-                                                <font key="NSFont" size="15" name="Palatino-Roman"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="onLogout:" destination="B7p-1s-UNM" eventType="touchUpInside" id="BNv-m6-ruW"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="feB-JI-4xD">
-                                <rect key="frame" x="168" y="251" width="79" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="IXj-gY-VcS">
+                                <rect key="frame" x="20" y="353" width="374" height="104"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xHo-qQ-F7a">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="46"/>
+                                        <color key="backgroundColor" red="0.87484711410000005" green="0.86806023119999998" blue="0.78458183999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="KdA-LE-s4C"/>
+                                        </constraints>
+                                        <state key="normal" title="My Posts">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="My Posts">
+                                                    <attributes>
+                                                        <color key="NSColor" systemColor="labelColor"/>
+                                                        <font key="NSFont" size="15" name="Palatino-Roman"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <segue destination="TIU-Vh-GfA" kind="presentation" id="qHw-vX-3gk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N3U-UL-SfC">
+                                        <rect key="frame" x="0.0" y="58" width="374" height="46"/>
+                                        <color key="backgroundColor" red="0.87484711410000005" green="0.86806023119999998" blue="0.78458183999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="HEP-Ac-IOm"/>
+                                        </constraints>
+                                        <state key="normal" title="Logout">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Logout">
+                                                    <attributes>
+                                                        <color key="NSColor" systemColor="labelColor"/>
+                                                        <font key="NSFont" size="15" name="Palatino-Roman"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="onLogout:" destination="B7p-1s-UNM" eventType="touchUpInside" id="BNv-m6-ruW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouT-lA-L4K">
+                                <rect key="frame" x="159" y="293" width="96.5" height="20"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Username">
                                         <attributes>
-                                            <font key="NSFont" size="17" name="Palatino-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <font key="NSFont" size="20" name="Courier-Bold"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
-                                <nil key="highlightedColor"/>
+                                <color key="highlightedColor" red="0.29908268710000002" green="0.77979479510000005" blue="0.96620899439999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EVB-ah-doX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GTN-xK-JXX" firstAttribute="top" secondItem="EVB-ah-doX" secondAttribute="top" constant="21" id="29q-8e-zJ1"/>
-                            <constraint firstItem="EVB-ah-doX" firstAttribute="trailing" secondItem="xHo-qQ-F7a" secondAttribute="trailing" constant="20" id="3eb-Kr-ypd"/>
-                            <constraint firstItem="xHo-qQ-F7a" firstAttribute="trailing" secondItem="N3U-UL-SfC" secondAttribute="trailing" id="9GG-A1-jrQ"/>
-                            <constraint firstItem="N3U-UL-SfC" firstAttribute="leading" secondItem="EVB-ah-doX" secondAttribute="leading" constant="20" id="IqJ-X2-wnJ"/>
-                            <constraint firstItem="xHo-qQ-F7a" firstAttribute="centerX" secondItem="GTN-xK-JXX" secondAttribute="centerX" id="Mgj-ZS-wg3"/>
-                            <constraint firstItem="feB-JI-4xD" firstAttribute="top" secondItem="GTN-xK-JXX" secondAttribute="bottom" constant="8" id="N45-mP-Jyt"/>
-                            <constraint firstItem="GTN-xK-JXX" firstAttribute="leading" secondItem="EVB-ah-doX" secondAttribute="leading" constant="138" id="NW9-oV-nkc"/>
-                            <constraint firstItem="EVB-ah-doX" firstAttribute="trailing" secondItem="N3U-UL-SfC" secondAttribute="trailing" constant="20" id="NYA-pH-rKI"/>
-                            <constraint firstItem="N3U-UL-SfC" firstAttribute="top" secondItem="xHo-qQ-F7a" secondAttribute="bottom" constant="8" id="UoX-4p-nKs"/>
-                            <constraint firstItem="xHo-qQ-F7a" firstAttribute="leading" secondItem="EVB-ah-doX" secondAttribute="leading" constant="20" id="W6Y-h5-0gY"/>
-                            <constraint firstItem="xHo-qQ-F7a" firstAttribute="top" secondItem="feB-JI-4xD" secondAttribute="bottom" constant="44" id="Z4k-Hz-kht"/>
-                            <constraint firstItem="feB-JI-4xD" firstAttribute="top" secondItem="GTN-xK-JXX" secondAttribute="bottom" constant="8" id="ZQH-z6-zHL"/>
-                            <constraint firstItem="EVB-ah-doX" firstAttribute="trailing" secondItem="N3U-UL-SfC" secondAttribute="trailing" constant="20" id="Zig-MA-Zgr"/>
-                            <constraint firstItem="N3U-UL-SfC" firstAttribute="leading" secondItem="EVB-ah-doX" secondAttribute="leading" constant="20" id="iDf-6X-3eY"/>
-                            <constraint firstItem="xHo-qQ-F7a" firstAttribute="top" secondItem="feB-JI-4xD" secondAttribute="bottom" constant="44" id="usN-RG-S9V"/>
-                            <constraint firstItem="xHo-qQ-F7a" firstAttribute="leading" secondItem="N3U-UL-SfC" secondAttribute="leading" id="xpn-JI-PQ7"/>
+                            <constraint firstItem="EVB-ah-doX" firstAttribute="trailing" secondItem="IXj-gY-VcS" secondAttribute="trailing" constant="20" id="0j7-M5-ySk"/>
+                            <constraint firstItem="GTN-xK-JXX" firstAttribute="centerX" secondItem="35G-1v-r5g" secondAttribute="centerX" id="13Y-mN-QSv"/>
+                            <constraint firstItem="ouT-lA-L4K" firstAttribute="centerX" secondItem="35G-1v-r5g" secondAttribute="centerX" id="30X-AD-kB5"/>
+                            <constraint firstItem="GTN-xK-JXX" firstAttribute="top" secondItem="EVB-ah-doX" secondAttribute="top" constant="40" id="BR7-1H-Iid"/>
+                            <constraint firstItem="IXj-gY-VcS" firstAttribute="leading" secondItem="EVB-ah-doX" secondAttribute="leading" constant="20" id="JLV-VT-qnh"/>
+                            <constraint firstItem="IXj-gY-VcS" firstAttribute="top" secondItem="ouT-lA-L4K" secondAttribute="bottom" constant="40" id="ZBD-05-rN4"/>
+                            <constraint firstItem="ouT-lA-L4K" firstAttribute="top" secondItem="GTN-xK-JXX" secondAttribute="bottom" constant="15" id="cQL-KD-S8J"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="W7q-Pz-z4z"/>
                     <connections>
                         <outlet property="myPostButton" destination="xHo-qQ-F7a" id="u17-fu-TeY"/>
-                        <outlet property="usernameLabel" destination="feB-JI-4xD" id="80R-rR-Jnn"/>
+                        <outlet property="usernameLabel" destination="ouT-lA-L4K" id="cGg-jY-XN0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHt-1S-rwq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

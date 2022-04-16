@@ -126,7 +126,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="YLo-jl-u5o">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarController" id="amD-AM-Qfp" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" modalPresentationStyle="fullScreen" id="amD-AM-Qfp" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8jm-hL-ugl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
