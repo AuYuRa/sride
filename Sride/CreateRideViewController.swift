@@ -8,7 +8,7 @@
 import UIKit
 import Parse
 
-class CreateRideViewController: UIViewController, UITextFieldDelegate {
+class CreateRideViewController: UIViewController{
     
     var share = false
     var request = false
@@ -29,14 +29,15 @@ class CreateRideViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        destination.delegate = self
-//        startingPoint.delegate = self
-//        dateofRide.delegate = self
-//        timeFrame.delegate = self
-//        nameofRider.delegate = self
-//        accompany.delegate = self
-//        contact.delegate = self
-//        extraNote.delegate = self
+        destination.delegate = self
+        startingPoint.delegate = self
+        dateofRide.delegate = self
+        timeFrame.delegate = self
+        nameofRider.delegate = self
+        accompany.delegate = self
+        contact.delegate = self
+        vaccination.delegate = self
+        extraNote.delegate = self
         
 
         // Do any additional setup after loading the view.
@@ -107,6 +108,8 @@ class CreateRideViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    
+    
     /*
     // MARK: - Navigation
 
@@ -119,7 +122,8 @@ class CreateRideViewController: UIViewController, UITextFieldDelegate {
 
 }
 
-extension ViewController: UITextFieldDelegate {
+
+extension CreateRideViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder() // dismiss keyboard
         return true
