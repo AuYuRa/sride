@@ -57,7 +57,7 @@
                                                     <attributedString key="attributedText">
                                                         <fragment content="StartPoint">
                                                             <attributes>
-                                                                <font key="NSFont" size="30" name="Palatino-Roman"/>
+                                                                <font key="NSFont" size="24" name="Palatino-Roman"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
@@ -75,7 +75,7 @@
                                                     <attributedString key="attributedText">
                                                         <fragment content="Destination">
                                                             <attributes>
-                                                                <font key="NSFont" size="30" name="Palatino-Roman"/>
+                                                                <font key="NSFont" size="24" name="Palatino-Roman"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
