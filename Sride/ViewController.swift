@@ -20,7 +20,10 @@ class ViewController: UIViewController {
         signupButton.layer.cornerRadius = 20
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        usernameField.delegate = self
+        passwordField.delegate = self
     }
+    
     @IBAction func onSignUp(_ sender: Any) {
         // Create a new PFUser object in the server
         let user = PFUser()
@@ -57,3 +60,11 @@ class ViewController: UIViewController {
     
 }
 
+// dismiss the keyboard when the return key is pressed
+//extension ViewController: UITextFieldDelegate {
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder() // dismiss keyboard
+//        return true
+//    }
+//
+//}

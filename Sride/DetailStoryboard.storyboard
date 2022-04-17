@@ -128,7 +128,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHh-ev-F3Z">
-                                <rect key="frame" x="20" y="185" width="160.5" height="19"/>
+                                <rect key="frame" x="20" y="185" width="142" height="19"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Name of the rider:">
                                         <attributes>
@@ -154,9 +154,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pds-LT-c6J">
-                                <rect key="frame" x="20" y="253" width="94" height="19"/>
+                                <rect key="frame" x="20" y="253" width="103" height="19"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="DateofRide:">
+                                    <fragment content="Date of Ride:">
                                         <attributes>
                                             <font key="NSFont" size="17" name="Palatino-Bold"/>
                                         </attributes>
@@ -180,9 +180,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Em-xe-NUR">
-                                <rect key="frame" x="20" y="321" width="92.5" height="19"/>
+                                <rect key="frame" x="20" y="321" width="97" height="19"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="TimeFrame:">
+                                    <fragment content="Time Frame:">
                                         <attributes>
                                             <font key="NSFont" size="17" name="Palatino-Bold"/>
                                         </attributes>
@@ -232,7 +232,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MT-dl-1PU">
-                                <rect key="frame" x="20" y="457" width="160.5" height="19"/>
+                                <rect key="frame" x="20" y="457" width="142" height="19"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Contact:">
                                         <attributes>
@@ -358,7 +358,6 @@
                             <constraint firstItem="pds-LT-c6J" firstAttribute="centerX" secondItem="7Em-xe-NUR" secondAttribute="centerX" id="B5q-Jr-0zL"/>
                             <constraint firstItem="AeT-D6-wAP" firstAttribute="leading" secondItem="8TP-zw-cz3" secondAttribute="leadingMargin" id="DDm-CJ-yRs"/>
                             <constraint firstItem="79c-bN-lsG" firstAttribute="leading" secondItem="ELF-IR-du9" secondAttribute="trailing" constant="72" id="Ddt-xT-ZZc"/>
-                            <constraint firstItem="YfY-Ho-HZ5" firstAttribute="trailing" secondItem="GHh-ev-F3Z" secondAttribute="trailing" constant="233.5" id="Gkp-11-ENr"/>
                             <constraint firstItem="Edk-0I-ak4" firstAttribute="baseline" secondItem="ELF-IR-du9" secondAttribute="baseline" id="Je5-rb-49N"/>
                             <constraint firstItem="ywD-gi-AOH" firstAttribute="centerX" secondItem="bgj-ol-ad3" secondAttribute="centerX" id="KLe-GR-F0L"/>
                             <constraint firstItem="82C-hz-vLQ" firstAttribute="centerY" secondItem="3rw-e3-zek" secondAttribute="centerY" id="LO1-iO-Xvy"/>

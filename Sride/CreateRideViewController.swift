@@ -8,7 +8,7 @@
 import UIKit
 import Parse
 
-class CreateRideViewController: UIViewController {
+class CreateRideViewController: UIViewController, UITextFieldDelegate {
     
     var share = false
     var request = false
@@ -26,8 +26,18 @@ class CreateRideViewController: UIViewController {
     @IBOutlet weak var requestRide: UISwitch!
     @IBOutlet weak var offerSwitch: UISwitch!
     @IBOutlet weak var vaccination: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+//        destination.delegate = self
+//        startingPoint.delegate = self
+//        dateofRide.delegate = self
+//        timeFrame.delegate = self
+//        nameofRider.delegate = self
+//        accompany.delegate = self
+//        contact.delegate = self
+//        extraNote.delegate = self
+        
 
         // Do any additional setup after loading the view.
     }
@@ -107,4 +117,11 @@ class CreateRideViewController: UIViewController {
     }
     */
 
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // dismiss keyboard
+        return true
+    }
 }
