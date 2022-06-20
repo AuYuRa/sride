@@ -6,6 +6,9 @@
 3. [Wireframes](#Wireframes)
 4. [Schema](#Schema)
 5. [Sprint 1 Updates](#Sprint-1-Updates)
+6. [Sprint 2 Updates](#Sprint-2-Updates)
+7. [Sprint 3 Updates](#Sprint-3-Updates)
+8. [Final Demo Video](#Final-Demo-Video)
 
 
 ## Overview
@@ -218,6 +221,11 @@ https://user-images.githubusercontent.com/93749279/161398224-efd455d1-9f42-493a-
 ## Sprint 3 Updates
 
 ![Screen Recording 2022-04-09 at 9 08 36 PM (1)](https://user-images.githubusercontent.com/60333098/162597910-69fddf9e-94c6-433b-a1d5-9633276fb7f8.gif)
+
+
+## Final Demo Video
+
+https://vimeo.com/700240403
 
 
 
