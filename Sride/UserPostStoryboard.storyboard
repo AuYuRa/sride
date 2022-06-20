@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +22,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RideCell" rowHeight="282" id="YDh-HA-hC8" customClass="RideCell" customModule="Sride" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="282"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="282"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YDh-HA-hC8" id="CKt-bf-FpA">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="282"/>
@@ -57,7 +58,7 @@
                                                     <attributedString key="attributedText">
                                                         <fragment content="StartPoint">
                                                             <attributes>
-                                                                <font key="NSFont" size="24" name="Palatino-Roman"/>
+                                                                <font key="NSFont" size="19" name="Palatino-Bold"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
@@ -75,7 +76,7 @@
                                                     <attributedString key="attributedText">
                                                         <fragment content="Destination">
                                                             <attributes>
-                                                                <font key="NSFont" size="24" name="Palatino-Roman"/>
+                                                                <font key="NSFont" size="19" name="Palatino-Bold"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
@@ -92,7 +93,7 @@
                                                     <attributedString key="attributedText">
                                                         <fragment content="Name of the rider:">
                                                             <attributes>
-                                                                <font key="NSFont" size="17" name="Palatino-Bold"/>
+                                                                <font key="NSFont" size="16" name="Palatino-BoldItalic"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
@@ -131,7 +132,7 @@
                                                     <attributedString key="attributedText">
                                                         <fragment content="When:">
                                                             <attributes>
-                                                                <font key="NSFont" size="17" name="Palatino-Bold"/>
+                                                                <font key="NSFont" size="16" name="Palatino-BoldItalic"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>

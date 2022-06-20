@@ -55,7 +55,7 @@
                                             <attributedString key="attributedText">
                                                 <fragment content="Start Point">
                                                     <attributes>
-                                                        <font key="NSFont" size="24" name="Palatino-Roman"/>
+                                                        <font key="NSFont" size="19" name="Palatino-Bold"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -73,7 +73,7 @@
                                             <attributedString key="attributedText">
                                                 <fragment content="Destination">
                                                     <attributes>
-                                                        <font key="NSFont" size="24" name="Palatino-Roman"/>
+                                                        <font key="NSFont" size="19" name="Palatino-Bold"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -90,7 +90,7 @@
                                             <attributedString key="attributedText">
                                                 <fragment content="Name of the rider:">
                                                     <attributes>
-                                                        <font key="NSFont" size="17" name="Palatino-Bold"/>
+                                                        <font key="NSFont" size="16" name="Palatino-BoldItalic"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -129,7 +129,7 @@
                                             <attributedString key="attributedText">
                                                 <fragment content="When:">
                                                     <attributes>
-                                                        <font key="NSFont" size="17" name="Palatino-Bold"/>
+                                                        <font key="NSFont" size="16" name="Palatino-BoldItalic"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>

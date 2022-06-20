@@ -128,11 +128,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHh-ev-F3Z">
-                                <rect key="frame" x="20" y="185" width="142" height="19"/>
+                                <rect key="frame" x="20" y="185" width="150.5" height="19"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Name of the rider:">
+                                    <fragment content="My name:">
                                         <attributes>
                                             <font key="NSFont" size="17" name="Palatino-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -154,7 +155,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pds-LT-c6J">
-                                <rect key="frame" x="20" y="253" width="103" height="19"/>
+                                <rect key="frame" x="20" y="253" width="126" height="19"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Date of Ride:">
                                         <attributes>
@@ -180,9 +181,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Em-xe-NUR">
-                                <rect key="frame" x="20" y="321" width="97" height="19"/>
+                                <rect key="frame" x="20" y="321" width="157" height="19"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Time Frame:">
+                                    <fragment content="Time of the day:">
                                         <attributes>
                                             <font key="NSFont" size="17" name="Palatino-Bold"/>
                                         </attributes>
@@ -206,9 +207,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Svh-h7-fdl">
-                                <rect key="frame" x="20" y="389" width="168.5" height="19"/>
+                                <rect key="frame" x="20" y="389" width="242.5" height="19"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="People with the rider:">
+                                    <fragment content="People going together with me:">
                                         <attributes>
                                             <font key="NSFont" size="17" name="Palatino-Bold"/>
                                         </attributes>
@@ -231,10 +232,10 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MT-dl-1PU">
-                                <rect key="frame" x="20" y="457" width="142" height="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MT-dl-1PU">
+                                <rect key="frame" x="20" y="457" width="177" height="19"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Contact:">
+                                    <fragment content="Contact preference:">
                                         <attributes>
                                             <font key="NSFont" size="17" name="Palatino-Bold"/>
                                         </attributes>
@@ -284,11 +285,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkW-iT-T5L">
-                                <rect key="frame" x="20" y="593" width="82.5" height="19"/>
+                                <rect key="frame" x="20" y="593" width="127.5" height="19"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Extra note:">
+                                    <fragment content="Additional note:">
                                         <attributes>
                                             <font key="NSFont" size="17" name="Palatino-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
