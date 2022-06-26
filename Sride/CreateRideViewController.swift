@@ -10,6 +10,7 @@ import Parse
 
 class CreateRideViewController: UIViewController{
     
+    // Initialize the booleans as false so that the UISwitch is off initially
     var share = false
     var request = false
     var offer = false
@@ -29,6 +30,7 @@ class CreateRideViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Delegating the UI elements to this view controller
         destination.delegate = self
         startingPoint.delegate = self
         dateofRide.delegate = self
@@ -38,19 +40,16 @@ class CreateRideViewController: UIViewController{
         contact.delegate = self
         vaccination.delegate = self
         extraNote.delegate = self
-        
-
-        // Do any additional setup after loading the view.
     }
     
     
     @IBAction func cancelButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil) // Dismiss the create post screen when the user clicks cancel
     }
     
     @IBAction func onSubmitButton(_ sender: Any) {
         let ride = PFObject(className: "Rides")
-        
+        // Capture the inputted texts and store them in the backend
         ride["Destination"] = destination.text!
         ride["StartingPoint"] = startingPoint.text!
         ride["DateOfRide"] = dateofRide.text!
@@ -78,9 +77,10 @@ class CreateRideViewController: UIViewController{
         
     }
     
-    @IBAction func shareSwitchFunction(_ sender: UISwitch){
+    // If the user switches the button on, change the Share/Request/Offer property to be true
 
-        if shareSwitch.isOn{
+    @IBAction func shareSwitchFunction(_ sender: UISwitch){
+        if shareSwitch.isOn {
             share = true
         }
         else{
@@ -97,7 +97,6 @@ class CreateRideViewController: UIViewController{
         }
     }
     
-    
     @IBAction func offerSwitchFunction(_ sender: UISwitch) {
         if offerSwitch.isOn{
             offer = true
@@ -106,9 +105,7 @@ class CreateRideViewController: UIViewController{
             offer = false
         }
     }
-    
-    
-    
+
     
     /*
     // MARK: - Navigation
@@ -124,8 +121,10 @@ class CreateRideViewController: UIViewController{
 
 
 extension CreateRideViewController: UITextFieldDelegate {
+    // dismiss keyboard when the user hits the Return button
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder() // dismiss keyboard
+        textField.resignFirstResponder()
         return true
     }
+
 }

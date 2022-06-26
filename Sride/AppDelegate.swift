@@ -13,23 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
-
+    // Connect the app with the custom Parse backend
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
-        // --- Copy this only
         
         let parseConfig = ParseClientConfiguration {
-//            $0.applicationId = "FtRZyRZYNWMNapuCXQoaVWaqxWPm7Y1xMAp4N3xo" // autumn's
-//            $0.clientKey = "xgwasRCAWEe3SXCPE8PbCZvGXu5KKB500cHAp55H" // autumn's
-                $0.applicationId = "S8R4WX9dqAGx4U6snzU1CweHoqZLhU3d2mlfoDp7" // <- SRIDE keys (collaborative, new)
-                $0.clientKey = "TWvnUWvAMDis3U6cPtvrCTWuV2rHNl8hOJX118EX" // <- SRIDE keys (collaborative, new)
+
+                $0.applicationId = "S8R4WX9dqAGx4U6snzU1CweHoqZLhU3d2mlfoDp7" // key of new collaborative Parse
+                $0.clientKey = "TWvnUWvAMDis3U6cPtvrCTWuV2rHNl8hOJX118EX" // key of new collaborative Parse
+            // Link to Parse project: https://parse-dashboard.back4app.com/apps/c0f478c8-30ef-4321-ba3c-ba2ea0ed8d70/browser/_User
                 $0.server = "https://parseapi.back4app.com"
         }
         Parse.initialize(with: parseConfig)
-        
-        // --- end copy
-
 
         return true
     }

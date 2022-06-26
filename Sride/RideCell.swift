@@ -14,12 +14,6 @@ class RideCell: UITableViewCell {
     @IBOutlet weak var destinationLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    //@IBOutlet weak var timeFrameLabel: UILabel!
-    //@IBOutlet weak var accompanyLabel: UILabel!
-    //@IBOutlet weak var contactLabel: UILabel!
-    @IBOutlet weak var sharerequestofferLabel: UILabel!
-    //@IBOutlet weak var vaccinatedLabel: UILabel!
-    //@IBOutlet weak var noteLabel: UILabel!
     @IBOutlet weak var shareLabel: UILabel!
     @IBOutlet weak var offerLabel: UILabel!
     @IBOutlet weak var requestLabel: UILabel!
@@ -31,7 +25,7 @@ class RideCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
 

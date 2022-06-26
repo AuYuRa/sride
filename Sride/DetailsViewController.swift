@@ -11,7 +11,8 @@ import MessageInputBar
 
 class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate {
     
-    @IBOutlet weak var tableView: UITableView! // the tableView only consists of comments, not the post itself
+    @IBOutlet weak var tableView: UITableView!
+    // the tableView in the DetailsViewController only consists of comments, not the details of the post
 
     var ride: PFObject?
 
@@ -30,7 +31,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
    @IBOutlet weak var requesting: UILabel!
 
     let commentBar = MessageInputBar()
-    var showsCommentBar = false
+    var showsCommentBar = false // Not show the comment
 
    override func viewDidLoad() {
        super.viewDidLoad()
@@ -38,21 +39,13 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
        tableView.delegate = self
        tableView.dataSource = self
        
-       tableView.keyboardDismissMode = .interactive
-       
-       //added this part
-       
-       let center = NotificationCenter.default
-       center.addObserver(self, selector: #selector(keyboardWillbeHidden(note:)), name: UIResponder.keyboardDidHideNotification, object: nil)
-
-       
-       commentBar.inputTextView.placeholder = "Add a comment..."
-       commentBar.sendButton.title = "Send"
-       commentBar.delegate = self
+       // make the keyboard follow the drag of our finger
+       tableView.keyboardDismissMode = .interactive // This line of code should be written prior to configurating anything in viewDidLoad(). The keyboard won't appear when we attempt to write comment otherwise.
        
        let user = ride!["accountOwner"] as! PFUser
        username.text = user.username
    
+       // Layout of the details of the post
        destination.text = (ride?["Destination"] as! String)
        start.text = (ride?["StartingPoint"] as! String)
        date.text = (ride?["DateOfRide"] as! String)
@@ -66,7 +59,9 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
        requesting.textColor = UIColor.clear
        offering.textColor = UIColor.clear
        
-    
+       
+    // Layout of the textbox for the ride characteristic (Share/Request/Offer)
+       
     if ride?["Share"] as! Bool {
 
         sharing.layer.borderWidth = 1.0
@@ -94,11 +89,27 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         }
        
+       
+       
+       let center = NotificationCenter.default
+       // Observing an event in the Notification Center.
+       // When that event happens, call the selector where the observer is
+       // The event is keyboardWillHideNotification, which is when the keyboard is going to be dismissed
+       // In this case, the observer is self - the DetailsViewController
+       // The selector is the keyboardDidHideNotification function we define below
+       
+       center.addObserver(self, selector: #selector(keyboardWillbeHidden(note:)), name: UIResponder.keyboardDidHideNotification, object: nil)
+
+       // the default text in the comment bar when there's no text
+       commentBar.inputTextView.placeholder = "Add a comment..."
+       commentBar.sendButton.title = "Send"
+       commentBar.delegate = self
+       
    }
    
    @objc func keyboardWillbeHidden(note: Notification){
-       commentBar.inputTextView.text = nil
-       showsCommentBar = false
+       commentBar.inputTextView.text = nil // Clear the text in the comment bar
+       showsCommentBar = false // Comment bar will be dismissed
        becomeFirstResponder()
    }
 
@@ -114,6 +125,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         let comment = PFObject(className: "Comments")
 
+        // Save the information about the comment in the backend
         comment["text"] = text
         comment["ride"] = ride
         comment["author"] = PFUser.current()!
@@ -131,7 +143,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         tableView.reloadData()
 
-        // clear and dismiss
+        // clear the comment bar and dismiss
         commentBar.inputTextView.text = nil
         showsCommentBar = false
         becomeFirstResponder()
@@ -141,10 +153,11 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let comments = (ride?["comments"] as? [PFObject]) ?? []
         switch comments.count == 0 {
-            case true:
-                return 1 // only one AddComment cell
-            case false:
-                return comments.count + 1 // the number of existing comments plus the AddComment cell
+            case true: // If the post hasn't had any comment
+                return 1 // only one row for the AddComment cell
+            
+            case false: // If the post has had one or more comments
+                return comments.count + 1 // the number of rows in the table view is the sum of the existing comments plus one AddComment cell
         }
         
     }
@@ -152,6 +165,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     // Rasha: previously there was no didSelectRowAt
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        // The first row will be the AddComment bar
         if indexPath.row == 0 {
             showsCommentBar = true
             becomeFirstResponder()
@@ -162,23 +176,29 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let comments = (ride?["comments"] as? [PFObject]) ?? []
         switch comments.count == 0 {
+            // When there is no comment
             case true:
-                /// No content
+                // No content
+            // The first row will be the AddComment cell
                 if indexPath.row == 0 {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
-                return cell
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
+                    return cell
                 }
+            // Other rows will be empty cells initially
                 else {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "empty-cell-id") as! EmptyTableViewCell
-                return cell
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "empty-cell-id") as! EmptyTableViewCell
+                    return cell
                 }
             
+            // When there is one or more comments
             case false:
-                /// User cell
+            // The first row will still be the AddComment cell
                 if indexPath.row == 0 {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
-                return cell
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
+                    return cell
                 }
+            
+            // Configure the following rows to be the comments created previously
                 else {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
                     let comment = comments[indexPath.row-1]
@@ -191,11 +211,4 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
  
 }
-
-//extension DetailsViewController: UITextFieldDelegate {
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        textField.resignFirstResponder() // dismiss keyboard
-//        return true
-//    }
-//}
 

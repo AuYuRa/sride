@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         if PFUser.current() != nil {
+            // Once the user is logged in, move them to the main feed screen
             let main = UIStoryboard(name: "Main", bundle: nil)
             let tabBarController = main.instantiateViewController(identifier: "TabBarController" )
             window?.rootViewController = tabBarController
