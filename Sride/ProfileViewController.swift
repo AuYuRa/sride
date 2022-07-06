@@ -45,7 +45,7 @@ class ProfileViewController: UIViewController {
 
     @IBAction func onLogout(_ sender: Any) {
         PFUser.logOut()
-        // After logging out, the user will be returned to the login screen
+        // After logging out, the user will be returned to the initial login screen
         let main = UIStoryboard(name: "Main", bundle: nil)
         let loginViewController = main.instantiateViewController(identifier: "LoginViewController")
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate else { return }

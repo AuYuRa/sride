@@ -144,7 +144,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.nameLabel.text = (ride["Name"] as! String)
         cell.dateLabel.text = (ride["DateOfRide"] as! String)
         
-        //Cell layout and color
+        // Cell layout and color
         cell.dateLabel.backgroundColor = UIColor.white
         cell.dateLabel.layer.cornerRadius = 20.0
 

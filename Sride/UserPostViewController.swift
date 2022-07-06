@@ -8,7 +8,7 @@
 import UIKit
 import Parse
 
-// Similar to the DetailsViewController
+// This is similar to the code for the DetailsViewController
 class UserPostViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!

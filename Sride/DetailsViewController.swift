@@ -31,7 +31,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
    @IBOutlet weak var requesting: UILabel!
 
     let commentBar = MessageInputBar()
-    var showsCommentBar = false // Not show the comment
+    var showsCommentBar = false // Not show the comment by default
 
    override func viewDidLoad() {
        super.viewDidLoad()

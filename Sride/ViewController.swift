@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     
 }
 
-// Dismiss the keyboard when the return key is pressed
+// Dismiss the keyboard when the return key is pressed.
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder() // dismiss keyboard

@@ -121,7 +121,7 @@ class CreateRideViewController: UIViewController{
 
 
 extension CreateRideViewController: UITextFieldDelegate {
-    // dismiss keyboard when the user hits the Return button
+    // Dismiss keyboard when the user hits the Return button
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
